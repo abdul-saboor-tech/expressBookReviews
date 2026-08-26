@@ -1,56 +1,56 @@
 const axios = require("axios");
 
-// Promise-based Axios helper
-function getBooksWithPromise(url) {
+// Get all books using Promise
+function getAllBooks(url) {
   return axios
-    .get(url)
+    .get(`${url}/books`)
     .then((response) => response.data)
     .catch((error) => {
+      console.error("Error retrieving all books:", error.message);
       throw error;
     });
 }
 
-// Async/await Axios helper
-async function getBooksWithAsyncAwait(url) {
+// Get book by ISBN using async/await
+async function getBooksByISBN(url, isbn) {
   try {
-    const response = await axios.get(url);
+    const response = await axios.get(
+      `${url}/books/isbn/${encodeURIComponent(isbn)}`
+    );
     return response.data;
   } catch (error) {
+    console.error("Error retrieving book by ISBN:", error.message);
     throw error;
   }
 }
 
-// Retrieve all books
-function getAllBooks(url) {
-  return getBooksWithPromise(`${url}/books`);
-}
-
-// Retrieve book by ISBN
-function getBooksByISBN(url, isbn) {
-  return getBooksWithAsyncAwait(
-    `${url}/books/isbn/${encodeURIComponent(isbn)}`
-  );
-}
-
-// Retrieve books by author
+// Get books by author using Promise
 function getBooksByAuthor(url, author) {
-  return getBooksWithPromise(
-    `${url}/books/author/${encodeURIComponent(author)}`
-  );
+  return axios
+    .get(`${url}/books/author/${encodeURIComponent(author)}`)
+    .then((response) => response.data)
+    .catch((error) => {
+      console.error("Error retrieving books by author:", error.message);
+      throw error;
+    });
 }
 
-// Retrieve books by title
-function getBooksByTitle(url, title) {
-  return getBooksWithAsyncAwait(
-    `${url}/books/title/${encodeURIComponent(title)}`
-  );
+// Get books by title using async/await
+async function getBooksByTitle(url, title) {
+  try {
+    const response = await axios.get(
+      `${url}/books/title/${encodeURIComponent(title)}`
+    );
+    return response.data;
+  } catch (error) {
+    console.error("Error retrieving books by title:", error.message);
+    throw error;
+  }
 }
 
 module.exports = {
-  getBooksWithPromise,
-  getBooksWithAsyncAwait,
   getAllBooks,
   getBooksByISBN,
   getBooksByAuthor,
-  getBooksByTitle,
+  getBooksByTitle
 };

@@ -1,34 +1,62 @@
 module.exports = {
-  "9780140328721": {
-    isbn: "9780140328721",
-    title: "Matilda",
-    author: "Roald Dahl",
-    reviews: {
-      "demo": "A wonderful and imaginative book."
-    }
+  "1": {
+    isbn: "1",
+    author: "Chinua Achebe",
+    title: "Things Fall Apart",
+    reviews: {}
   },
-  "9780743273565": {
-    isbn: "9780743273565",
-    title: "The Great Gatsby",
-    author: "F. Scott Fitzgerald",
-    reviews: {
-      "demo": "A classic American novel."
-    }
+  "2": {
+    isbn: "2",
+    author: "Hans Christian Andersen",
+    title: "Fairy tales",
+    reviews: {}
   },
-  "9780061120084": {
-    isbn: "9780061120084",
-    title: "To Kill a Mockingbird",
-    author: "Harper Lee",
-    reviews: {
-      "demo": "Powerful and memorable."
-    }
+  "3": {
+    isbn: "3",
+    author: "Dante Alighieri",
+    title: "The Divine Comedy",
+    reviews: {}
   },
-  "9780451524935": {
-    isbn: "9780451524935",
-    title: "1984",
-    author: "George Orwell",
-    reviews: {
-      "demo": "An important dystopian novel."
-    }
+  "4": {
+    isbn: "4",
+    author: "Unknown",
+    title: "The Epic Of Gilgamesh",
+    reviews: {}
+  },
+  "5": {
+    isbn: "5",
+    author: "Unknown",
+    title: "The Book Of Job",
+    reviews: {}
+  },
+  "6": {
+    isbn: "6",
+    author: "Unknown",
+    title: "One Thousand and One Nights",
+    reviews: {}
+  },
+  "7": {
+    isbn: "7",
+    author: "Unknown",
+    title: "Njál's Saga",
+    reviews: {}
+  },
+  "8": {
+    isbn: "8",
+    author: "Jane Austen",
+    title: "Pride and Prejudice",
+    reviews: {}
+  },
+  "9": {
+    isbn: "9",
+    author: "Honoré de Balzac",
+    title: "Le Père Goriot",
+    reviews: {}
+  },
+  "10": {
+    isbn: "10",
+    author: "Samuel Beckett",
+    title: "Molloy, Malone Dies, The Unnamable, the trilogy",
+    reviews: {}
   }
 };
