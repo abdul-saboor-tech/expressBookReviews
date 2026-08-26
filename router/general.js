@@ -14,7 +14,7 @@ router.get("/books/isbn/:isbn", (req, res) => {
 
   if (!book) {
     return res.status(404).json({
-      message: "Book not found"
+      message: "Book not found",
     });
   }
 
@@ -31,7 +31,7 @@ router.get("/books/author/:author", (req, res) => {
 
   if (result.length === 0) {
     return res.status(404).json({
-      message: "No books found"
+      message: "No books found",
     });
   }
 
@@ -48,7 +48,7 @@ router.get("/books/title/:title", (req, res) => {
 
   if (result.length === 0) {
     return res.status(404).json({
-      message: "No books found"
+      message: "No books found",
     });
   }
 
@@ -61,7 +61,7 @@ router.get("/books/:isbn/review", (req, res) => {
 
   if (!book) {
     return res.status(404).json({
-      message: "Book not found"
+      message: "Book not found",
     });
   }
 
